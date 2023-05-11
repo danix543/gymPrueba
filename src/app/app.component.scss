@@ -1,0 +1,16 @@
+/*app.component.scss*/
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sidebar {
+  flex: 0 0;
+  min-width: 200px;
+}
+
+.content {
+  background-color: #1e293b;
+  flex: 1;
+}

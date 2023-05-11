@@ -1,0 +1,9 @@
+<div *ngIf="ejercicios">
+  <div *ngFor="let ejercicio of ejercicios.slice(0,1)">
+    <h2>{{ ejercicio.name }}</h2>
+    <p>{{ ejercicio.description }}</p>
+
+      <img *ngFor="let imagen of imagenesEjercicios[ejercicio.id]" [src]="imagen.image" alt="{{ imagen.caption }}">
+  </div>
+</div>
+

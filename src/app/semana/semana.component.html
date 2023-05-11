@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Mi Rutina Semanal</h2>
+      <hr>
+      <div *ngIf="error" class="alert alert-danger" role="alert">
+        {{ error }}
+      </div>
+      <div *ngFor="let ejercicioDia of ejercicios">
+        <h3>{{ ejercicioDia.dia }}</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Ejercicio</th>
+              <th>Series</th>
+              <th>Repeticiones</th>
+              <th>Descanso (segundos)</th>
+              <th>Detalles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ejercicio of ejercicioDia.ejercicios">
+              <td>{{ ejercicio.name }}</td>
+              <td>{{ ejercicio.sets }}</td>
+              <td>{{ ejercicio.repetitions }}</td>
+              <td>{{ ejercicio.rest }}</td>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
